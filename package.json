@@ -1,0 +1,26 @@
+{
+  "name": "@fidooo/root",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:e2e": "pnpm --filter @fidooo/web test:e2e",
+    "test:coverage": "turbo run test:coverage",
+    "clean": "turbo run clean"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "pnpm": {
+    "overrides": {
+      "fastify": "5.8.5"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.6"
+  }
+}

@@ -1,0 +1,22 @@
+/* ───────────────────────────────────────
+   Base layer
+   ─────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply h-full font-sans;
+    font-feature-settings: "cv01", "ss03";
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv01", "ss03";
+  }
+
+  /* Source Serif — editorial OpenType features for headlines */
+  .font-heading,
+  .font-serif {
+    font-feature-settings: "onum", "liga", "kern";
+  }
+}

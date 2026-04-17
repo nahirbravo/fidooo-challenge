@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "title": "Fidooo Chat",
+    "description": "Chat en tiempo real con asistente AI — Firebase + OpenAI"
+  },
+  "common": {
+    "appName": "Fidooo Chat",
+    "navBrand": "FidoooChat",
+    "retry": "Reintentar",
+    "dismiss": "Descartar",
+    "loading": "Cargando...",
+    "error": "Algo salió mal"
+  },
+  "language": {
+    "es": "Español",
+    "en": "English"
+  },
+  "placeholder": {
+    "email": "email@example.com",
+    "password": "••••••••"
+  },
+  "field": {
+    "email": "Email",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña"
+  },
+  "auth": {
+    "tagline": {
+      "title": "Conversaciones claras, respuestas precisas.",
+      "subtitle": "Tu asistente para pensar mejor cada día."
+    },
+    "features": {
+      "speed": "Respuestas en segundos",
+      "context": "Contexto siempre presente",
+      "audience": "Diseñado para devs y curiosos"
+    },
+    "login": {
+      "title": "Iniciar sesión",
+      "submit": "Ingresar",
+      "registerLink": "¿No tenés cuenta? Crear una",
+      "forgotLink": "¿Olvidaste tu contraseña?",
+      "error": "Email o contraseña incorrectos"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "submit": "Crear cuenta",
+      "loginLink": "¿Ya tenés cuenta? Iniciar sesión",
+      "emailExists": "Ya existe una cuenta con este email",
+      "passwordHint": "Mínimo 8 caracteres, 1 mayúscula y 1 número"
+    },
+    "forgotPassword": {
+      "title": "Recuperar contraseña",
+      "submit": "Enviar email de recuperación",
+      "success": "Si existe una cuenta con ese email, enviamos un link para restablecer tu contraseña",
+      "backLink": "Volver a iniciar sesión"
+    }
+  },
+  "chat": {
+    "inputPlaceholder": "Escribí tu mensaje...",
+    "emptyTitle": "¿Qué querés resolver hoy?",
+    "emptySubtitle": "Empezá una conversación o probá una sugerencia.",
+    "kbd": {
+      "send": "para enviar",
+      "newline": "para nueva línea"
+    },
+    "prompts": {
+      "code": {
+        "title": "Explicar código",
+        "hint": "Repaso una función línea por línea",
+        "text": "Explicame este código paso a paso:\n\n"
+      },
+      "explain": {
+        "title": "Entender una idea",
+        "hint": "Conceptos complejos en palabras",
+        "text": "Explicame en términos simples qué es "
+      },
+      "write": {
+        "title": "Redactar un texto",
+        "hint": "Email, post o documentación",
+        "text": "Escribime un email profesional sobre "
+      },
+      "solve": {
+        "title": "Resolver un problema",
+        "hint": "Pensamos opciones juntos",
+        "text": "Necesito ayuda con "
+      }
+    },
+    "typing": "Asistente escribiendo...",
+    "sending": "Enviando mensaje",
+    "sendError": "No se pudo enviar el mensaje",
+    "retry": "Reintentar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "actions": {
+      "label": "Acciones del mensaje"
+    },
+    "newMessages": "Nuevos mensajes ↓",
+    "loadOlder": "Cargar anteriores",
+    "charCount": "{count}/{max}",
+    "send": "Enviar mensaje"
+  },
+  "settings": {
+    "appearance": "Apariencia",
+    "language": "Idioma",
+    "logout": "Cerrar sesión",
+    "logoutConfirm": "¿Cerrar sesión?",
+    "logoutConfirmDesc": "Vas a cerrar tu sesión actual",
+    "cancel": "Cancelar"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Automático"
+  },
+  "errors": {
+    "notFound": "Página no encontrada",
+    "goHome": "Volver al inicio",
+    "generic": "Algo salió mal",
+    "network": "Error de conexión. Verificá tu red",
+    "rateLimited": "Demasiados mensajes. Esperá un momento"
+  },
+  "toast": {
+    "loginSuccess": "Sesión iniciada",
+    "registerSuccess": "Cuenta creada",
+    "logoutSuccess": "Sesión cerrada",
+    "themeChanged": "Tema actualizado",
+    "languageChanged": "Idioma actualizado",
+    "resetEmailSent": "Email de recuperación enviado"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "email": "Ingresá un email válido",
+    "passwordMin": "Mínimo 8 caracteres",
+    "passwordUpper": "Debe contener al menos 1 mayúscula",
+    "passwordDigit": "Debe contener al menos 1 número",
+    "passwordMatch": "Las contraseñas no coinciden"
+  }
+}

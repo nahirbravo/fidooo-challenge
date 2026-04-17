@@ -1,0 +1,336 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ───────────────────────────────────────
+   Light mode (default) — Claude warm palette
+   ─────────────────────────────────────── */
+:root {
+  --radius: 0.75rem; /* 12px — Claude generously rounded baseline */
+
+  /* App surface */
+  --app-bg: #f5f4ed;          /* Parchment — primary canvas */
+  --app-bg-elevated: #faf9f5;  /* Ivory — elevated surfaces */
+  --app-panel: rgba(250, 249, 245, 0.86);
+  --app-panel-solid: #faf9f5;
+  --app-text: #141413;         /* Anthropic Near Black */
+  --app-text-muted: #5e5d59;   /* Olive Gray */
+  --app-text-subtle: #87867f;  /* Stone Gray */
+  --app-text-quaternary: #b0aea5;
+
+  /* Brand accent — Claude terracotta */
+  --app-accent: #c96442;        /* Terracotta Brand */
+  --app-accent-hover: #d97757;  /* Coral Accent */
+  --app-accent-foreground: #faf9f5;
+
+  /* Borders — cream-tinted */
+  --app-border: #f0eee6;
+  --app-border-strong: #e8e6dc;
+  --app-focus: rgba(56, 152, 236, 0.45); /* Focus Blue — only cool color */
+  --app-grid: rgba(20, 20, 19, 0.045);
+  --app-rule: rgba(20, 20, 19, 0.06);
+
+  /* Ring shadow system — Claude signature */
+  --app-ring-warm: #d1cfc5;
+  --app-ring-deep: #c2c0b6;
+  --app-shadow-ring: 0 0 0 1px var(--app-ring-warm);
+  --app-shadow-whisper: 0 4px 24px rgba(20, 20, 19, 0.05);
+  --app-shadow: var(--app-shadow-whisper);
+
+  /* shadcn mapping */
+  --background: var(--app-bg);
+  --foreground: var(--app-text);
+  --card: var(--app-bg-elevated);
+  --card-foreground: var(--app-text);
+  --popover: var(--app-panel-solid);
+  --popover-foreground: var(--app-text);
+  --primary: var(--app-accent);
+  --primary-foreground: var(--app-accent-foreground);
+  --secondary: #e8e6dc;          /* Warm Sand */
+  --secondary-foreground: #4d4c48; /* Charcoal Warm */
+  --muted: var(--app-bg-elevated);
+  --muted-foreground: var(--app-text-muted);
+  --accent: #e8e6dc;
+  --accent-foreground: var(--app-text);
+  --destructive: #b53333;        /* Error Crimson — warm */
+  --border: var(--app-border);
+  --input: var(--app-border);
+  --ring: #3898ec;               /* Focus Blue */
+  --chart-1: #c96442;
+  --chart-2: #d97757;
+  --chart-3: #5e5d59;
+  --chart-4: #87867f;
+  --chart-5: #4d4c48;
+  --sidebar: var(--app-bg-elevated);
+  --sidebar-foreground: var(--app-text);
+  --sidebar-primary: var(--app-accent);
+  --sidebar-primary-foreground: var(--app-accent-foreground);
+  --sidebar-accent: #e8e6dc;
+  --sidebar-accent-foreground: var(--app-text);
+  --sidebar-border: var(--app-border);
+  --sidebar-ring: var(--ring);
+
+  /* Custom tokens */
+  --surface: var(--app-bg-elevated);
+  --surface-hover: #e8e6dc;
+  --success: #5a8a5e; /* warm muted green */
+
+  /* Auth surface */
+  --auth-bg: var(--app-bg);
+  --auth-bg-elevated: var(--app-bg-elevated);
+  --auth-panel: var(--app-bg-elevated);
+  --auth-panel-header: rgba(255, 255, 255, 0.6);
+  --auth-input: #ffffff;
+  --auth-input-hover: #fbfaf3;
+  --auth-border: var(--app-border);
+  --auth-border-strong: var(--app-border-strong);
+  --auth-text: var(--app-text);
+  --auth-text-muted: var(--app-text-muted);
+  --auth-text-subtle: var(--app-text-subtle);
+  --auth-accent: var(--app-accent);
+  --auth-accent-hover: var(--app-accent-hover);
+  --auth-accent-foreground: var(--app-accent-foreground);
+  --auth-focus: var(--app-focus);
+  --auth-grid: var(--app-grid);
+  --auth-rule: var(--app-rule);
+  --auth-ring: var(--app-ring-warm);
+  --auth-shadow: var(--app-shadow-whisper);
+
+  /* Chat surface */
+  --chat-bg: var(--app-bg);
+  --chat-bg-elevated: var(--app-bg-elevated);
+  --chat-header: rgba(245, 244, 237, 0.85);
+  --chat-panel: var(--app-bg-elevated);
+  --chat-panel-solid: var(--app-bg-elevated);
+  --chat-panel-hover: #efeee5;
+  --chat-border: var(--app-border);
+  --chat-border-strong: var(--app-border-strong);
+  --chat-text: var(--app-text);
+  --chat-text-muted: var(--app-text-muted);
+  --chat-text-subtle: var(--app-text-subtle);
+  --chat-accent: var(--app-accent);
+  --chat-accent-hover: var(--app-accent-hover);
+  --chat-accent-foreground: var(--app-accent-foreground);
+  --chat-focus: var(--app-focus);
+  --chat-assistant: transparent;
+  --chat-user: #efedde;        /* warm sand for user bubbles */
+  --chat-user-border: var(--app-border-strong);
+  --chat-input: #ffffff;
+  --chat-rule: var(--app-rule);
+  --chat-ring: var(--app-ring-warm);
+  --chat-shadow: var(--app-shadow-whisper);
+  --chat-corner: rgba(201, 100, 66, 0.4); /* terracotta corner accent */
+}
+
+/* ───────────────────────────────────────
+   Dark mode — Claude warm dark
+   ─────────────────────────────────────── */
+.dark {
+  --app-bg: #141413;          /* Anthropic Near Black */
+  --app-bg-elevated: #1c1c1a;  /* warmer step up */
+  --app-panel: rgba(48, 48, 46, 0.86);
+  --app-panel-solid: #30302e;  /* Dark Surface */
+  --app-text: #f5f4ed;         /* Parchment */
+  --app-text-muted: #b0aea5;   /* Warm Silver */
+  --app-text-subtle: #87867f;  /* Stone Gray */
+  --app-text-quaternary: #5e5d59;
+
+  /* Brand accent */
+  --app-accent: #d97757;        /* Coral Accent — brighter on dark */
+  --app-accent-hover: #e58c70;
+  --app-accent-foreground: #141413;
+
+  /* Borders — warm dark */
+  --app-border: #30302e;
+  --app-border-strong: #3d3d3a;
+  --app-focus: rgba(56, 152, 236, 0.5);
+  --app-grid: rgba(245, 244, 237, 0.04);
+  --app-rule: rgba(245, 244, 237, 0.07);
+
+  --app-ring-warm: rgba(245, 244, 237, 0.08);
+  --app-ring-deep: rgba(245, 244, 237, 0.12);
+  --app-shadow-ring: 0 0 0 1px var(--app-ring-warm);
+  --app-shadow-whisper: 0 4px 24px rgba(0, 0, 0, 0.32);
+  --app-shadow: var(--app-shadow-whisper);
+
+  --background: var(--app-bg);
+  --foreground: var(--app-text);
+  --card: var(--app-bg-elevated);
+  --card-foreground: var(--app-text);
+  --popover: var(--app-panel-solid);
+  --popover-foreground: var(--app-text);
+  --primary: var(--app-accent);
+  --primary-foreground: var(--app-accent-foreground);
+  --secondary: var(--app-panel-solid);
+  --secondary-foreground: var(--app-text);
+  --muted: var(--app-bg-elevated);
+  --muted-foreground: var(--app-text-muted);
+  --accent: var(--app-panel-solid);
+  --accent-foreground: var(--app-text);
+  --destructive: #c84545;
+  --border: var(--app-border);
+  --input: var(--app-border);
+  --ring: #3898ec;
+  --chart-1: #d97757;
+  --chart-2: #c96442;
+  --chart-3: #b0aea5;
+  --chart-4: #87867f;
+  --chart-5: #5e5d59;
+  --sidebar: var(--app-bg-elevated);
+  --sidebar-foreground: var(--app-text);
+  --sidebar-primary: var(--app-accent);
+  --sidebar-primary-foreground: var(--app-accent-foreground);
+  --sidebar-accent: var(--app-panel-solid);
+  --sidebar-accent-foreground: var(--app-text);
+  --sidebar-border: var(--app-border);
+  --sidebar-ring: var(--ring);
+
+  --surface: var(--app-bg-elevated);
+  --surface-hover: var(--app-panel-solid);
+  --success: #6fa572;
+
+  --auth-bg: var(--app-bg);
+  --auth-bg-elevated: var(--app-bg-elevated);
+  --auth-panel: var(--app-bg-elevated);
+  --auth-panel-header: rgba(48, 48, 46, 0.78);
+  --auth-input: var(--app-panel-solid);
+  --auth-input-hover: #383836;
+  --auth-border: var(--app-border);
+  --auth-border-strong: var(--app-border-strong);
+  --auth-text: var(--app-text);
+  --auth-text-muted: var(--app-text-muted);
+  --auth-text-subtle: var(--app-text-subtle);
+  --auth-accent: var(--app-accent);
+  --auth-accent-hover: var(--app-accent-hover);
+  --auth-accent-foreground: var(--app-accent-foreground);
+  --auth-focus: var(--app-focus);
+  --auth-grid: var(--app-grid);
+  --auth-rule: var(--app-rule);
+  --auth-ring: var(--app-ring-warm);
+  --auth-shadow: var(--app-shadow-whisper);
+
+  --chat-bg: var(--app-bg);
+  --chat-bg-elevated: var(--app-bg-elevated);
+  --chat-header: rgba(20, 20, 19, 0.85);
+  --chat-panel: var(--app-bg-elevated);
+  --chat-panel-solid: var(--app-panel-solid);
+  --chat-panel-hover: #38383a;
+  --chat-border: var(--app-border);
+  --chat-border-strong: var(--app-border-strong);
+  --chat-text: var(--app-text);
+  --chat-text-muted: var(--app-text-muted);
+  --chat-text-subtle: var(--app-text-subtle);
+  --chat-accent: var(--app-accent);
+  --chat-accent-hover: var(--app-accent-hover);
+  --chat-accent-foreground: var(--app-accent-foreground);
+  --chat-focus: var(--app-focus);
+  --chat-assistant: transparent;
+  --chat-user: var(--app-panel-solid);
+  --chat-user-border: var(--app-border-strong);
+  --chat-input: var(--app-panel-solid);
+  --chat-rule: var(--app-rule);
+  --chat-ring: var(--app-ring-warm);
+  --chat-shadow: var(--app-shadow-whisper);
+  --chat-corner: rgba(217, 119, 87, 0.5);
+}
+
+/* ───────────────────────────────────────
+   Tailwind theme mapping
+   ─────────────────────────────────────── */
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-source-serif), Georgia, serif;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-success: var(--success);
+
+  --color-auth-bg: var(--auth-bg);
+  --color-auth-bg-elevated: var(--auth-bg-elevated);
+  --color-auth-panel: var(--auth-panel);
+  --color-auth-panel-header: var(--auth-panel-header);
+  --color-auth-input: var(--auth-input);
+  --color-auth-input-hover: var(--auth-input-hover);
+  --color-auth-border: var(--auth-border);
+  --color-auth-border-strong: var(--auth-border-strong);
+  --color-auth-text: var(--auth-text);
+  --color-auth-text-muted: var(--auth-text-muted);
+  --color-auth-text-subtle: var(--auth-text-subtle);
+  --color-auth-accent: var(--auth-accent);
+  --color-auth-accent-hover: var(--auth-accent-hover);
+  --color-auth-accent-foreground: var(--auth-accent-foreground);
+  --color-auth-focus: var(--auth-focus);
+  --color-auth-rule: var(--auth-rule);
+
+  --color-chat-bg: var(--chat-bg);
+  --color-chat-bg-elevated: var(--chat-bg-elevated);
+  --color-chat-header: var(--chat-header);
+  --color-chat-panel: var(--chat-panel);
+  --color-chat-panel-solid: var(--chat-panel-solid);
+  --color-chat-panel-hover: var(--chat-panel-hover);
+  --color-chat-border: var(--chat-border);
+  --color-chat-border-strong: var(--chat-border-strong);
+  --color-chat-text: var(--chat-text);
+  --color-chat-text-muted: var(--chat-text-muted);
+  --color-chat-text-subtle: var(--chat-text-subtle);
+  --color-chat-accent: var(--chat-accent);
+  --color-chat-accent-hover: var(--chat-accent-hover);
+  --color-chat-accent-foreground: var(--chat-accent-foreground);
+  --color-chat-focus: var(--chat-focus);
+  --color-chat-assistant: var(--chat-assistant);
+  --color-chat-user: var(--chat-user);
+  --color-chat-user-border: var(--chat-user-border);
+  --color-chat-input: var(--chat-input);
+  --color-chat-rule: var(--chat-rule);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+
+  /* ───────────────────────────────────────
+   Z-index scale — FR-041
+   ─────────────────────────────────────── */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}

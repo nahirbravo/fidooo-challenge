@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "title": "Fidooo Chat",
+    "description": "Real-time chat with AI assistant — Firebase + OpenAI"
+  },
+  "common": {
+    "appName": "Fidooo Chat",
+    "navBrand": "FidoooChat",
+    "retry": "Retry",
+    "dismiss": "Dismiss",
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  },
+  "language": {
+    "es": "Español",
+    "en": "English"
+  },
+  "placeholder": {
+    "email": "email@example.com",
+    "password": "••••••••"
+  },
+  "field": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "auth": {
+    "tagline": {
+      "title": "Clear conversations, precise answers.",
+      "subtitle": "Your assistant for thinking better every day."
+    },
+    "features": {
+      "speed": "Answers in seconds",
+      "context": "Context always in focus",
+      "audience": "Built for devs and the curious"
+    },
+    "login": {
+      "title": "Sign in",
+      "submit": "Sign in",
+      "registerLink": "Don't have an account? Create one",
+      "forgotLink": "Forgot your password?",
+      "error": "Invalid email or password"
+    },
+    "register": {
+      "title": "Create account",
+      "submit": "Create account",
+      "loginLink": "Already have an account? Sign in",
+      "emailExists": "An account with this email already exists",
+      "passwordHint": "At least 8 characters, 1 uppercase and 1 number"
+    },
+    "forgotPassword": {
+      "title": "Reset password",
+      "submit": "Send recovery email",
+      "success": "If an account exists with that email, we sent a recovery link",
+      "backLink": "Back to sign in"
+    }
+  },
+  "chat": {
+    "inputPlaceholder": "Type your message...",
+    "emptyTitle": "What do you want to solve today?",
+    "emptySubtitle": "Start a conversation or try a suggestion.",
+    "kbd": {
+      "send": "to send",
+      "newline": "for new line"
+    },
+    "prompts": {
+      "code": {
+        "title": "Explain code",
+        "hint": "Walk through a function line by line",
+        "text": "Walk me through this code step by step:\n\n"
+      },
+      "explain": {
+        "title": "Understand an idea",
+        "hint": "Complex concepts in plain words",
+        "text": "Explain in simple terms what "
+      },
+      "write": {
+        "title": "Draft something",
+        "hint": "Email, post or documentation",
+        "text": "Draft a professional email about "
+      },
+      "solve": {
+        "title": "Solve a problem",
+        "hint": "Think through options together",
+        "text": "I need help with "
+      }
+    },
+    "typing": "Assistant is typing...",
+    "sending": "Sending message",
+    "sendError": "Could not send message",
+    "retry": "Retry",
+    "copy": "Copy",
+    "copied": "Copied",
+    "actions": {
+      "label": "Message actions"
+    },
+    "newMessages": "New messages ↓",
+    "loadOlder": "Load older",
+    "charCount": "{count}/{max}",
+    "send": "Send message"
+  },
+  "settings": {
+    "appearance": "Appearance",
+    "language": "Language",
+    "logout": "Sign out",
+    "logoutConfirm": "Sign out?",
+    "logoutConfirmDesc": "You will be signed out of your current session",
+    "cancel": "Cancel"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "goHome": "Go home",
+    "generic": "Something went wrong",
+    "network": "Connection error. Check your network",
+    "rateLimited": "Too many messages. Wait a moment"
+  },
+  "toast": {
+    "loginSuccess": "Signed in",
+    "registerSuccess": "Account created",
+    "logoutSuccess": "Signed out",
+    "themeChanged": "Theme updated",
+    "languageChanged": "Language updated",
+    "resetEmailSent": "Recovery email sent"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Enter a valid email",
+    "passwordMin": "At least 8 characters",
+    "passwordUpper": "Must contain at least 1 uppercase letter",
+    "passwordDigit": "Must contain at least 1 number",
+    "passwordMatch": "Passwords don't match"
+  }
+}
